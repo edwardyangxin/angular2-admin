@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 
+import {NavComp} from './nav.comp';
 @Component({
     selector: 'angular-admin',
-    template: '<h1>TEST</h1>',
+    templateUrl: 'assets/html/app.comp.html',
     styleUrls: [],
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES, NavComp]
 })
 export class AppComp {
     
