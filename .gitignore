@@ -1,0 +1,6 @@
+app/*.js
+app/*.js.map
+
+note_modules/
+
+typings/*
