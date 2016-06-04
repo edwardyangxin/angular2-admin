@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 
 import {NavComp} from './nav.comp';
-import {DashboardComp} from './dashboard.comp';
+import {DashboardComp} from './dashboard/dashboard.comp';
 import {TablesComp} from './tables.comp';
 import {FormsComp} from './forms.comp';
 
