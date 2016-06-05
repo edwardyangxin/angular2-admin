@@ -1,31 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
+import {Panel} from './panel';
+import {PanelService} from './panel.service';
 @Component({
-    templateUrl: 'assests/html/panel.comp.html'
+    selector: 'panel',
+    templateUrl: 'assets/html/panel.comp.html',
+    providers:[PanelService]
 })
-class PanelComp {
-   private messageNumber:number = 0;
-   private title:string = '';
-   private icon:string = 'fa-comments';
+export class PanelComp implements OnInit{
+   panels:Array<Panel>;
    
    constructor(
-       messageNumber:number,
-       title:string,
-       icon?:string
-   ){
-       this.messageNumber = messageNumber;
-       this.title = title;
-       if (icon) {
-           this.icon = icon;
-       }
+       private panelService:PanelService
+   ){}
+   
+   ngOnInit(){
+       this.panelService.getPanelData().then(
+           panelData => this.panels = panelData
+       );
    }
 }
-
-const panleType: Array<String> = [
-    'panel-primary',
-    'panel-green',
-    'panel-yellow',
-    'panel-red'
-];
-
-export {PanelComp, panleType}
