@@ -10,6 +10,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { TypographyComponent } from './typography/typography.component';
 import { IconsComponent } from './icons/icons.component';
 import { GridComponent } from './grid/grid.component';
+import { TablesComponent } from './tables/tables.component';
 
 import { DataResolver } from './app.resolver';
 
@@ -23,6 +24,7 @@ export const routes: RouterConfig = [
   { path: 'typography', component: TypographyComponent },
   { path: 'icons', component: IconsComponent },
   { path: 'grid', component: GridComponent },
+  { path: 'tables', component: TablesComponent },
   // make sure you match the component type string to the require in asyncRoutes
   { path: 'about', component: 'About',
     resolve: {

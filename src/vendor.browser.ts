@@ -22,6 +22,10 @@ import 'rxjs/add/operator/mergeMap';
 
 import 'metismenu/dist/metisMenu.min.js'
 
+import 'datatables.net/js/jquery.dataTables.js';
+import 'datatables.net-bs/js/dataTables.bootstrap.js';
+import 'dataTables.net-responsive/js/dataTables.responsive.js';
+
 if ('production' === ENV) {
   // Production
 

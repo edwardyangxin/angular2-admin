@@ -1,43 +1,81 @@
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
-        <ul #metisMenu class="nav metismenu" >
-            <li *ngFor="let menu of menuArray">
-                <a href="{{menu.link}}" *ngIf="menu.link">
-                    <i class="fa fa-fw" [ngClass]="menu.icon" *ngIf="menu.icon"></i>
-                    {{menu.name}}<span class="fa arrow" *ngIf="menu.children"></span>
-                </a>
-                <a routerLink="{{menu.route}}" *ngIf="menu.route">
-                    <i class="fa fa-fw" [ngClass]="menu.icon" *ngIf="menu.icon"></i>
-                    {{menu.name}}<span class="fa arrow" *ngIf="menu.children"></span>
-                </a>
-                
-                <ul class="nav nav-second-level" *ngIf="menu.children">
-                    <li *ngFor="let sonMenu of menu.children">
-                        <a href="{{sonMenu.link}}" *ngIf="sonMenu.link">
-                            <i class="fa fa-fw" [ngClass]="sonMenu.icon" *ngIf="sonMenu.iocn"></i>
-                            {{sonMenu.name}}<span class="fa arrow" *ngIf="sonMenu.children"></span>
-                        </a>
-                        <a routerLink="{{sonMenu.route}}" *ngIf="sonMenu.route">
-                            <i class="fa fa-fw" [ngClass]="sonMenu.icon" *ngIf="sonMenu.iocn"></i>
-                            {{sonMenu.name}}<span class="fa arrow" *ngIf="sonMenu.children"></span>
-                        </a>
-                        
-                        <ul class="nav nav-third-level">
-                            <li *ngFor="let grandsonMenu of sonMenu.children">
-                                <a href="{{grandsonMenu.link}}" *ngIf="grandsonMenu.link">
-                                    <i class="fa fa-fw" [ngClass]="grandsonMenu.icon" *ngIf="grandsonMenu.iocn"></i>
-                                    {{grandsonMenu.name}}<span class="fa arrow" *ngIf="grandsonMenu.children"></span>
-                                </a>
-                                <a routerLink="{{grandsonMenu.route}}" *ngIf="grandsonMenu.route">
-                                    <i class="fa fa-fw" [ngClass]="grandsonMenu.icon" *ngIf="grandsonMenu.iocn"></i>
-                                    {{grandsonMenu.name}}<span class="fa arrow" *ngIf="grandsonMenu.children"></span>
-                                </a>
-                            </li>
-                        </ul>
+        <ul #metisMenu class="nav metismenu">
+            <li>
+                <a routerLink="dashboard" routerLinkActive="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="flot.html">Flot Charts</a>
+                    </li>
+                    <li>
+                        <a href="morris.html">Morris.js Charts</a>
                     </li>
                 </ul>
+                <!-- /.nav-second-level -->
             </li>
-
+            <li>
+                <a routerLink="tables" routerLinkActive="active"><i class="fa fa-table fa-fw"></i> Tables</a>
+            </li>
+            <li>
+                <a routerLink="forms" routerLinkActive="active"><i class="fa fa-edit fa-fw"></i> Forms</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a routerLink="panels-and-wells" routerLinkActive="active">Panels and Wells</a>
+                    </li>
+                    <li>
+                        <a routerLink="buttons" routerLinkActive="active">Buttons</a>
+                    </li>
+                    <li>
+                        <a routerLink="notifications" routerLinkActive="active">Notifications</a>
+                    </li>
+                    <li>
+                        <a routerLink="typography" routerLinkActive="active">Typography</a>
+                    </li>
+                    <li>
+                        <a routerLink="icons" routerLinkActive="active">Icons</a>
+                    </li>
+                    <li>
+                        <a routerLink="grid" routerLinkActive="active">Grid</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
         </ul>
     </div>
 </div>

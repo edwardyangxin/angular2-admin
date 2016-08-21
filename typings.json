@@ -1,6 +1,7 @@
 {
   "globalDependencies": {
     "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "jquery.datatables": "registry:dt/jquery.datatables#1.9.4+20160317120654",
     "metismenu": "registry:dt/metismenu#2.0.3+20160316155526"
   }
 }
