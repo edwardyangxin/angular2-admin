@@ -4,13 +4,25 @@ import { HomeComponent } from './home';
 import { NoContent } from './no-content';
 
 import { FormsComponent } from './forms/forms.component';
+import { PanelsAndWellsComponent } from './panels-and-wells/panels-and-wells.component';
+import { ButtonsComponent } from './buttons/buttons.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { TypographyComponent } from './typography/typography.component';
+import { IconsComponent } from './icons/icons.component';
+import { GridComponent } from './grid/grid.component';
 
 import { DataResolver } from './app.resolver';
 
 export const routes: RouterConfig = [
   { path: '',      component: HomeComponent },
-  { path: 'home',  component: HomeComponent },
+  { path: 'dashboard',  component: HomeComponent },
   { path: 'forms', component: FormsComponent},
+  { path: 'panels-and-wells', component: PanelsAndWellsComponent },
+  { path: 'buttons', component: ButtonsComponent },
+  { path: 'notifications', component: NotificationsComponent },
+  { path: 'typography', component: TypographyComponent },
+  { path: 'icons', component: IconsComponent },
+  { path: 'grid', component: GridComponent },
   // make sure you match the component type string to the require in asyncRoutes
   { path: 'about', component: 'About',
     resolve: {

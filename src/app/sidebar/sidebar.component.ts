@@ -1,4 +1,6 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+
+import {Menu} from './menu.entity';
 
 declare let jQuery: any;
 
@@ -6,10 +8,12 @@ declare let jQuery: any;
     selector: 'aaSidebar',
     templateUrl: './sidebar.component.html'
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements AfterViewInit {
     @ViewChild('metisMenu') el: ElementRef;
-
-    ngOnInit() {
+    
+    @Input() menuArray:Array<Menu>;
+    
+    ngAfterViewInit() {
         jQuery(this.el.nativeElement).metisMenu();
     }
 }
