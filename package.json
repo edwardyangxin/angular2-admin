@@ -97,7 +97,10 @@
     "http-server": "^0.9.0",
 
     "bootstrap-sass": "^3.3.7",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.2"
+    "ng2-bootstrap": "^1.0.24",
+    "metismenu": "^2.5.2",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.28",

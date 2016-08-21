@@ -1,41 +1,27 @@
-<div class="card-container">
-  <h1 x-large class="sample-content">Your Content Here</h1>
-
-  <div>
-    For material design components use the <a href="https://github.com/AngularClass/angular2-webpack-starter/tree/material2"><b>material2</b></a> branch
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Dashboard</h1>
   </div>
-
-  <hr>
-
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
+</div>
+<div class="row">
+  <div class="col-lg-3 col-md-6">
+    <aaPanel [title]="26" [desc]="'New Comments!'">
+      <i class="fa fa-comments fa-5x"></i>
+    </aaPanel>
   </div>
-
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
-
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button md-raised-button color="primary">Submit Value</button>
-    </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
-
-    <pre>this.localState = {{ localState | json }}</pre>
-
+  <div class="col-lg-3 col-md-6">
+    <aaPanel [title]="12" [desc]="'New Tasks!'" [color]="'panel-green'">
+      <i class="fa fa-tasks fa-5x"></i>
+    </aaPanel>
   </div>
-
+  <div class="col-lg-3 col-md-6">
+    <aaPanel [title]="124" [desc]="'New Orders!'" [color]="'panel-yellow'">
+      <i class="fa fa-shopping-cart fa-5x"></i>
+    </aaPanel>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <aaPanel [title]="13" [desc]="'Support Tickets!'" [color]="'panel-red'">
+      <i class="fa fa-support fa-5x"></i>
+    </aaPanel>
+  </div>
 </div>
